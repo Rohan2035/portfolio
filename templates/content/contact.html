@@ -1,0 +1,70 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block head %}
+
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="{% static 'CSS/essentials.css'%}">
+    <link rel="stylesheet" href="{% static 'CSS/contact.css'%}">
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("sxi9puvNryr7RdKLv");
+    })();
+    </script>
+
+{% endblock %}
+
+{% block body %}
+
+    {% include 'partials/nav.html' %}
+
+    <div class="container">
+
+        <div class="alert alert-success" role="alert" hidden="true" id="alert-success">
+            <strong>Mail sent successfully ✨✨</strong>
+        </div>
+        
+        <div class="alert alert-danger" role="alert" hidden="true" id="alert-danger">
+            <strong>Mail could not be sent ❌❌</strong>
+        </div>
+
+        <div class="row align-items-center">
+
+            <div class="col">
+
+                <form method="post">
+
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                      <label for="name">Name: </label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="message">Message: </label>
+                        <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter message"></textarea>
+                    </div>
+
+                    <button onclick="return sendMail();" type="button" class="btn btn-warning">Submit</button>
+                
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{% static 'JS/contact.js' %}"></script>
+
+{% endblock %}

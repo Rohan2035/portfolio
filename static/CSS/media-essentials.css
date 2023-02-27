@@ -1,0 +1,127 @@
+@media screen and (max-width : 768px) {
+
+    /* Cards and it's Containers */    
+    .flashbox {
+
+        padding: 2px;
+        display: block;
+
+    }
+
+    .card-holder {
+
+        margin: 2px;
+        padding: 2px;
+
+    }
+
+    .flashcard {
+
+        margin: 2px;
+        width: 14rem;
+        height: 8.5rem;
+
+    }
+
+    .flashcard-header {
+
+        padding: 3px;
+
+    }
+
+    .flashcard-header h3 {
+
+        font-size: 1.2em;
+
+    }
+
+    .flashcard-content {
+
+        padding: 3px;
+
+    }
+
+    .flashcard-content h2 {
+
+        font-size: 1.1em;
+        padding: 3px 3px 3px 5px;
+
+    }
+
+    .flashcard-content p {
+
+        margin: 7px 3px 2px 5px;
+
+    }
+
+    .flashcard-l {
+
+        height: fit-content;
+        width: 16rem;
+
+    }
+
+    .technology-used {
+
+        display: none;
+
+    }
+
+    .flashcard-img img{
+
+        height: 4cm;
+
+    }
+
+
+    /* Heading and Content */
+    .section-heading {
+
+        margin: 8px 2px 2px 1px;
+        padding: auto 2px auto 2px; 
+
+    }
+
+    .section-heading h1 {
+
+        padding: 1px;
+        font-size: 1.8em;
+
+
+    }
+
+}
+
+@media screen and (max-width : 329px) {    
+
+    .flashcard {
+
+        margin: 2px;
+        width: 13rem;
+        height: 8.5rem;
+
+    }
+
+    
+    .flashcard-l {
+
+        height: fit-content;
+        width: 13rem;
+
+    }
+
+    .flashcard-content h2 {
+
+        font-size: 1em;
+
+    }
+
+    .flashcard-content p {
+
+        font-size: 0.5em;
+
+    }
+
+
+}
+

@@ -1,0 +1,104 @@
+@media screen and (max-width: 760px) {
+
+    /* Header */
+    #profile-cont h1 {
+
+        font-size: 2rem;
+        font-weight: 600;
+    
+    }
+    
+    #profile-cont p {
+    
+        font-weight: 600;
+        font-size: 0.7em;
+    
+    }
+    
+    #profile-img img {
+    
+        border-radius: 1.5rem;
+        height: 4cm;
+        width: 4cm;
+    
+    }
+    
+}
+
+
+@media screen and (max-width: 320px) {
+
+    /* Footer Section */
+    .footer-content h3 {
+
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .footer-content p {
+
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .footer-content li svg {
+
+        height: 16px;
+        width: 16px;
+
+    }
+
+    .footer-content li {
+
+        margin-left: 4px;
+        margin-right: 4px;
+
+    }
+
+
+}
+
+
+@media screen and (max-width: 978px) {
+
+    /* Section - 2  */
+    .carousel {
+
+        width : 12cm;
+
+    }
+
+
+}
+
+
+@media screen and (max-width: 492px) {
+
+
+    /* Section: 2 */
+    .carousel {
+
+        width: 7cm;
+
+    }
+
+    .slider-image {
+
+        height: 3cm;
+        width: 4cm;
+
+    }
+
+    .carousel-item {
+
+        height: 12cm;
+
+    }
+
+}
+
+

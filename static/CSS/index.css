@@ -1,0 +1,240 @@
+/* Header Section */
+.header {
+    
+    background: url('/static/images/background-image.jpg');
+    background-position: center center;
+    padding-bottom: 20px;
+
+}
+
+#profile-cont {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+
+#profile-cont h1 {
+
+    font-size: 4em;
+    font-weight: 600;
+    color: rgb(255, 232, 149);
+
+}
+
+
+#profile-cont p {
+
+    font-weight: 600;
+    width: 80%;
+    margin: auto;
+    color: rgb(229, 255, 209);
+    font-size: 1.6em;
+
+}
+
+
+#profile-img {
+
+    margin: 10px auto auto auto;
+    width: fit-content;
+
+}
+
+
+#profile-img img {
+
+    border-radius: 2.5rem;
+    height: 7cm;
+    width: 7cm;
+    border: 2px solid rgb(255, 253, 135);
+
+}
+
+
+.flashcard-content-l h2{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.flashcard-content-l p {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+/* Section - 1 */
+.ed-and-exp {
+
+    background-color: rgb(51, 51, 51);
+    color: rgb(241, 241, 241);
+    border-top: 2px solid rgb(205, 205, 205);
+    border-bottom: 2px solid rgb(169, 242, 255);
+    padding-bottom: 1rem;
+
+}
+
+
+
+/* Section - 2 */
+.skills {
+
+    background-image: linear-gradient(to bottom right, rgb(44, 99, 100), rgb(11, 151, 153));
+    color: rgb(195, 254, 255);
+    border-bottom: 2px solid rgb(255, 169, 169);
+    height: fit-content;
+
+}
+
+
+.carousel {
+
+    width: 25cm;
+    border: 2px solid rgb(189, 189, 189);
+    background-color: rgb(53, 53, 53);
+    border-radius: 1rem;
+    margin: auto;
+         
+}
+
+
+.carousel-item {
+
+    height: 15cm;
+
+}
+
+
+.carousel-holder {
+
+    margin: 20px auto 20px auto;
+    width: fit-content;
+
+}
+
+
+.slider-image {
+
+    height: 4cm;
+    width: 5cm;
+    border: 3px solid rgb(205, 217, 205);
+    border-radius: 1rem;
+    margin-left: auto;
+
+}
+
+
+/* Section-3 */
+.projects {
+
+    background-image: linear-gradient(to bottom right, rgb(96, 0, 0), rgb(122, 50, 50));
+    border-bottom: 2px solid rgb(176, 176, 176);
+    color: rgb(255, 217, 217);
+    height: fit-content;
+    padding-bottom: 2em;
+
+}
+
+.technology-used {
+
+    height: fit-content;
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content:space-between;
+    padding: 2px;
+    margin: 7px auto 3px auto;
+
+}
+
+.badge {
+
+    border: 2px solid black;
+    margin-right: 2px;
+
+}
+
+.bi {
+
+    margin-bottom: 4px;
+
+}
+
+.btn {
+
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}
+
+
+/* Footer */
+.footer {
+
+    background-color: rgb(49, 49, 49);
+    height: fit-content;
+
+}
+
+
+.footer-content {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+.footer-content h3 {
+
+    color: rgb(217, 217, 217);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+
+.footer-content p {
+
+    color: rgb(217, 217, 217);
+    font-size: 1.3em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    text-align: center;
+    margin: 3px;
+
+}
+
+
+.footer-links {
+
+    list-style-type: none;
+    margin: auto;
+    width: fit-content;
+    padding: 2px 2px 2px 2px;
+
+}
+
+
+.footer-links li {
+
+    display: inline;
+    margin: 2px 35px 2px 35px;
+
+}
+
+
+.footer-links a {
+
+    color: white;
+
+}
+

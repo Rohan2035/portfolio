@@ -1,0 +1,356 @@
+{% extends 'partials/base.html' %}
+
+{% load static %}
+
+{% block head %}
+
+    <title>Rohan VG | Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/media-index.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/essentials.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/media-essentials.css' %}">
+
+{% endblock %}
+
+{% block body %}
+
+    <!-- Header -->
+    <header class="header">
+
+        {% include 'partials/nav.html' %}
+
+        <div class="box">
+
+            <div class="stack">
+
+                <div id="profile-img">
+
+                    <img src="{% static 'images/profile.jpg' %}" alt="">
+
+                </div>
+
+                <div id="profile-cont">
+
+                    <h1>Hola!! I am Rohan</h1>
+                    <p>I'm a software engineer who loves to code. My interests include web designing and backend development.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <!-- Section - 1: Education and Experience -->
+    <section class="ed-and-exp">
+
+        <div class="box">
+
+            <div class="stack">
+                
+                <div class="section-heading">
+
+                    <h1>Time Span:</h1>
+
+                </div>
+
+            </div>
+
+            <div class="stack">
+
+                <div class="flashbox">
+
+                    <!-- Education -->
+                    {% for ed in educations %}
+
+                    <div class="card-holder">
+
+                        <div class="flashcard {{ ed.card_color }}">
+
+                            <div class="flashcard-header">
+                                
+                                <h3>{{ ed.year_of_joining }} - {{ ed.year_of_leaving }}</h3>
+
+                            </div>
+
+                            <div class="flashcard-content">
+                                
+                                <h2>{{ ed.institution_name }}</h2>
+                                <p>{{ ed.course_studied }}</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    {% endfor %}
+
+                    <!-- Experience -->
+                    {% for exp in experiences %}
+
+                        <div class="card-holder">
+
+                            <div class="flashcard {{ exp.card_color }}">
+
+                                <div class="flashcard-header">
+                                    
+                                    <h3>{{ exp.year_of_joining }} - {{ exp.year_of_leaving }}</h3>
+
+                                </div>
+
+                                <div class="flashcard-content">
+                                    
+                                    <h2>{{ exp.company_name }}</h2>
+                                    <p>{{ exp.position }}</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section - 2: Skills -->
+    <section class="skills">
+
+        <div class="box">
+
+            <div class="stack">
+
+                <div class="section-heading">
+
+                    <h1>Skills:</h1>
+
+                </div>
+
+            </div>
+
+            <div class="stack">
+                
+                <div class="frame">
+
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+
+                            {% for i in range %}
+                                
+                                <li data-target="#carouselExampleIndicators" data-slide-to="{{i}}"></li>
+                                
+                            {% endfor %}
+                        </ol>
+                    
+                        <div class="carousel-inner">
+                            
+                            <div class="carousel-item active">
+
+                                {% for i in skills %}
+
+                                <div class="carousel-holder">
+                                    
+                                    <img src="/media/{{i.image_skill}}" alt="" class="slider-image">
+                                
+                                </div>
+                                
+                                {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
+
+                            </div>
+                                
+                            <div class="carousel-item">
+
+                                {% endif %}
+
+                                {% endfor %}
+                                
+                            </div>
+                            
+                            
+                        </div>
+                    
+                    
+                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </button>
+                    
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section - 3: Projects done -->
+    <section class="projects">
+
+        <div class="box">
+
+            <div class="stack">
+
+                <div class="section-heading">
+                    
+                    <h1>Projects:</h1>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stack">
+
+                <div class="flashbox">
+
+                    {% for project in projects %}
+
+                        <div class="card-holder">
+                            
+                            
+                            <div class="flashcard flashcard-l b-light">
+
+                                <div class="flashcard-header card-designer-light">
+
+                                    <h3>Project : {{ project.project_id }}</h3>
+
+                                </div>
+
+                                
+                                <div class="flashcard-img">
+
+                                    <img src="/media/{{project.project_img}}" alt="">
+
+                                </div>
+
+                                <div class="flashcard-content">
+
+                                    <h2>{{ project.project_name }}</h2>
+
+                                    <p>{{ project.about_project }}</p>
+
+                                    <div class="technology-used">
+
+                                        {% for t_list in tech_list %}
+
+                                            {% if forloop.counter == project.project_id %}
+
+                                                {% for tech in t_list%}
+                                                    <h5><span class="badge badge-pill badge-warning">{{ tech }}</span></h5>
+                                                {% endfor %}
+
+                                            {% endif %}
+
+                                        {% endfor %}
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="flashcard-footer">
+
+                                    <div class="flashcard-buttons">
+
+
+                                        <div class="flashcard-button-holder">
+
+                                            {% if project.website_link %}
+                                                <a href="{{project.website_link}}" class="btn btn-secondary btn-sm">
+                                            
+                                                {% include 'partials/w-link.html '%}
+                                                Website
+                                            
+                                            </a>
+                                            {% endif %}
+        
+                                            <a href="{{project.git_hub_link}}" class="btn btn-dark btn-sm">
+                                                
+                                                {% include 'partials/g-link.html '%}
+                                                Github
+                                            
+                                            </a>
+
+                                        </div>    
+
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Section - 4: Footer -->
+    <footer class="footer">
+
+        <div class="box">
+
+            <div class="stack">
+
+                <div class="footer-content">
+
+                    <h3>Built using Django and Bootstrap</h3>
+                    <p>Rohan Venkatesh Gupta 2022</p>
+
+                    <ul class="footer-links">
+
+                        <li>
+
+                            <a href="https://github.com/Rohan2035">{% include "partials/g-link-2.html" %}</a>
+
+                        </li>
+                        
+                        <li>
+                            
+                            <a href="https://www.linkedin.com/in/rohan-12-gupta/">{% include "partials/l-link.html" %}</a>
+
+                        </li>
+                        
+                        <li>
+                            <a href="{% url 'content-contact' %}">{% include "partials/m-link.html" %}</a>
+                        
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+{% endblock %}

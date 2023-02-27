@@ -1,0 +1,227 @@
+/* Basics */
+.box {
+
+    margin: 0 10px 0 10px;
+
+}
+
+
+.stack {
+
+    padding: 3px 5px 3px 5px;
+
+}
+
+
+.frame {
+
+    width: fit-content;
+    margin: 20px auto 20px auto;
+
+}
+
+/* Heading and Content */
+
+.section-heading {
+
+    margin: 10px 5px 5px 4px;
+    padding: auto 5px auto 5px;
+    width: fit-content;
+
+}
+
+.section-heading h1 {
+    
+    padding: 4px;
+    width: fit-content;
+    font-size: 2.5em;
+    
+}
+
+/* Background Colors */
+.b-light {
+
+    background-color: rgb(240, 240, 240);
+    color: rgb(52, 52, 52);
+
+}
+
+
+.b-info {
+
+    background-color: rgb(0, 164, 209);
+    color: rgb(255, 255, 240);
+
+}
+
+
+.b-warning {
+
+    background-color: rgb(224, 189, 17);
+    color: rgb(52, 52, 52);
+
+}
+
+
+.b-danger {
+
+    background-color: rgb(180, 0, 0);
+    color: rgb(255, 255, 255);
+
+}
+
+
+.b-success {
+
+    background-color: rgb(0, 154, 44);
+    color: rgb(255, 255, 255);    
+
+}
+
+
+/* Cards and it's Containers */
+.flashbox {
+
+    margin: 2px auto 2px auto;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 4px;
+    justify-content:space-between;
+
+}
+
+
+.card-holder {
+
+    width: fit-content;
+    height: fit-content;
+    margin: 4px;
+    padding: 4px;
+
+}
+
+
+.flashcard {
+
+    margin: 4px;
+    width: 18rem;
+    height: 10rem;
+    border: 2px solid rgb(195, 195, 195);
+    border-radius: 9px;
+
+}
+
+
+.flashcard-l {
+
+    height: fit-content;
+    width: 20rem;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 3px 3px 0 0 rgba(204, 204, 204, 0.482);
+
+}
+
+
+.flashcard-header {
+
+    padding: 5px;
+
+}
+
+
+.flashcard-header h3 {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 450;
+    font-size: 1.5em;
+    width: fit-content;
+    margin: 0 auto 0 auto;
+
+}
+
+
+.flashcard-content {
+
+    padding: 5px 5px 5px 5px;
+    height: fit-content;
+
+}
+
+.flashcard-content h2 {
+
+    margin: 3px 3px 3px 7px;
+    font-size: 1.27em;
+    font-family: Arial;
+    font-weight: 550;
+
+}
+
+
+.flashcard-content p {
+
+    margin: 10px 3px 2px 7px;
+    font-weight: 530;
+
+}
+
+
+.flashcard-img {
+
+    height: fit-content;
+    width: 99%;
+    margin: 5px auto 5px auto;
+    padding: 4px;
+
+}
+
+
+.flashcard-img img {
+
+    border: 2px solid rgb(27, 27, 27);
+    height: 6cm;
+    width: 100%;
+    margin: 2px auto 2px auto;
+    border-radius: 1rem;
+
+}
+
+.flashcard-footer {
+
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto 2px auto;
+    padding: 3px;
+
+}
+
+.card-designer-light {
+
+    background-color: rgb(199, 199, 199);
+    width: 100%;
+    margin: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.flashcard-button-holder {
+
+    margin: 3px;
+    height: fit-content;
+    width: 99%;
+
+}
+
+/* Nav */
+
+#nav-logo {
+
+    width: 1.5cm;
+    height: 1.5cm;
+    border-radius: 3px;
+    border: 2px solid rgb(208, 208, 208);
+
+}
